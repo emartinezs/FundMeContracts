@@ -10,12 +10,12 @@ error FundMe__CallFailed();
 /** @title A contract for crowd funding
  *   @author Edward
  *   @notice This contract is to demo a sample funding contract
- *   @dev This implements price feeds as our library
+ *   @dev This implements price feeds
  */
 contract FundMe {
     using PriceConverter for uint256;
 
-    uint256 public constant MINIMUM_USD = 10 * 10**18;
+    uint256 public constant MINIMUM_USD = 10 * 10 ** 18;
 
     address[] private s_funders;
     mapping(address => uint256) private s_addressToAmountFunded;
@@ -106,11 +106,9 @@ contract FundMe {
         return s_funders[index];
     }
 
-    function getAddressToAmountFunded(address funder)
-        public
-        view
-        returns (uint256)
-    {
+    function getAddressToAmountFunded(
+        address funder
+    ) public view returns (uint256) {
         return s_addressToAmountFunded[funder];
     }
 

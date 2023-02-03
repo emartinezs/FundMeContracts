@@ -1,13 +1,33 @@
-# Sample Hardhat Project
+# Fund Me
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+A dapp for crowd funding using Chainlink Price Feeds.
 
-Try running some of the following tasks:
+## Install
 
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Install dependencies
+
+    $ npm install
+
+Compile the contracts
+
+    $ npx hardhat compile
+
+## Tests
+
+Run tests with hardhat
+
+    $ npx hardhat test
+
+Run tests with coverage
+
+    $ npx hadhat coverage
+
+## Running the application
+
+Start a local hardhat node
+
+    $ npx hardhat node
+
+Deploy the contracts
+
+    $ npx hardhat deploy
